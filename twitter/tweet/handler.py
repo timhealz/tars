@@ -1,5 +1,8 @@
 from os import write
 from typing import Dict
+import logging
+log = logging.getLogger(__name__)
+
 from tars.twitter.tweet.interface import TweetInterface
 from tars.db.insert import Insert
 from tars.utils import write_data_to_json
