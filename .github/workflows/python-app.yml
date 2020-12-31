@@ -25,9 +25,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r $(grep -ivE "apache-airflow|apache-airflow-upgrade-check" requirements.txt); fi
-    - name: set pythonpath
+    - name: Set PYTHONPATH
       run: |
-        echo "::set-env name=PYTHONPATH::home/runner/work/tars"
+        echo "PYTHONPATH=home/runner/work/tars" >> $GITHUB_ENV
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
