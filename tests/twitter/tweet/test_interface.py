@@ -4,7 +4,8 @@ import unittest
 from tars.utils import read_json_to_dict
 from tars.twitter.tweet.interface import TweetInterface
 
-resources_dir = os.path.join(os.environ["HOME"], 'tarscode/tars/tests/twitter/resources')
+base_path = os.path.dirname(os.path.realpath(__file__))
+resources_dir = os.path.join(base_path, '../resources')
 
 
 class TestTweetInterface(unittest.TestCase):
