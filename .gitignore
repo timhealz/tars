@@ -1,4 +1,8 @@
 __pycache__*
 config.yaml
-*.json
 spendy/*
+.coverage
+*.cfg
+airflow/logs/*
+test/htmlcov/*
+*.pid
